@@ -1,0 +1,16 @@
+package framework;
+
+import java.io.FileInputStream;
+
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+
+public class falsee {
+	public static void main(String[] args) throws Throwable {
+		FileInputStream fis=new FileInputStream("C:\\Users\\ethin\\Documents\\Bexcel.xlsx");
+		Workbook wb = WorkbookFactory.create(fis);
+		Boolean data = wb.getSheet("Sheet1").getRow(0).getCell(0).getBooleanCellValue();
+		System.out.println(data);
+
+}
+}
